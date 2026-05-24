@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaCodeBranch } from 'react-icons/fa';
 import aboutImage from '../assets/about-image.png';
+import aboutImageBack from '../assets/about-image-back.png';
 
 const About = () => {
   const containerVariants = {
@@ -44,13 +45,28 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center w-full max-w-md mx-auto"
             >
-              <img
-                src={aboutImage}
-                alt="About Rushil Patel"
-                className="w-full max-w-md object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite] rounded-3xl"
-              />
+              <div className="flip-container w-full aspect-[4/5] animate-[float_6s_ease-in-out_infinite] drop-shadow-2xl">
+                <div className="flip-inner w-full h-full relative">
+                  {/* Front side (Original About Image) */}
+                  <div className="flip-front">
+                    <img
+                      src={aboutImage}
+                      alt="About Rushil Patel"
+                      className="w-full h-full object-cover rounded-3xl"
+                    />
+                  </div>
+                  {/* Back side (New Cyberpunk Image) */}
+                  <div className="flip-back">
+                    <img
+                      src={aboutImageBack}
+                      alt="Rushil Patel Desk"
+                      className="w-full h-full object-cover rounded-3xl"
+                    />
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             {/* RIGHT: Text + Skill Cards */}

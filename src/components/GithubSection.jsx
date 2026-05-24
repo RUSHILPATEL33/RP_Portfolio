@@ -4,7 +4,6 @@ import { GitHubCalendar } from 'react-github-calendar';
 
 const GithubSection = () => {
   const username = "RUSHILPATEL33";
-  const [statsError, setStatsError] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -63,18 +62,11 @@ const GithubSection = () => {
             className="bg-white dark:bg-neutral-900/50 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-neutral-800 flex flex-col items-center justify-center transition-colors duration-300"
           >
             <h3 className="text-xl font-bold text-slate-700 dark:text-neutral-200 mb-4">GitHub Stats</h3>
-            {!statsError ? (
-              <img 
-                src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=${isDark ? 'dark' : 'transparent'}&hide_border=true&title_color=${isDark ? 'fff' : '0f172a'}&text_color=${isDark ? 'cbd5e1' : '475569'}&icon_color=3b82f6`} 
-                alt="GitHub Stats" 
-                className="w-full max-w-md"
-                onError={() => setStatsError(true)}
-              />
-            ) : (
-              <div className="w-full h-40 flex items-center justify-center text-slate-400 text-sm font-medium border border-dashed border-slate-200 dark:border-neutral-800 rounded-xl">
-                Stats temporarily unavailable.
-              </div>
-            )}
+            <img 
+              src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${username}&show_icons=true&bg_color=transparent&hide_border=true&title_color=${isDark ? 'a855f7' : '0f172a'}&text_color=${isDark ? 'e2e8f0' : '475569'}&icon_color=8b5cf6`} 
+              alt="GitHub Stats" 
+              className="w-full max-w-md"
+            />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
@@ -83,18 +75,11 @@ const GithubSection = () => {
             className="bg-white dark:bg-neutral-900/50 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-neutral-800 flex flex-col items-center justify-center transition-colors duration-300"
           >
             <h3 className="text-xl font-bold text-slate-700 dark:text-neutral-200 mb-4">Top Languages</h3>
-            {!statsError ? (
-              <img 
-                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=${isDark ? 'dark' : 'transparent'}&hide_border=true&title_color=${isDark ? 'fff' : '0f172a'}&text_color=${isDark ? 'cbd5e1' : '475569'}`} 
-                alt="Top Languages" 
-                className="w-full max-w-sm"
-                onError={() => setStatsError(true)}
-              />
-            ) : (
-              <div className="w-full h-40 flex items-center justify-center text-slate-400 text-sm font-medium border border-dashed border-slate-200 dark:border-neutral-800 rounded-xl">
-                Languages data unavailable.
-              </div>
-            )}
+            <img 
+              src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${username}&layout=compact&bg_color=transparent&hide_border=true&title_color=${isDark ? 'a855f7' : '0f172a'}&text_color=${isDark ? 'e2e8f0' : '475569'}`} 
+              alt="Top Languages" 
+              className="w-full max-w-sm"
+            />
           </motion.div>
         </div>
       </div>
