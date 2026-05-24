@@ -80,14 +80,14 @@ const GithubSection = () => {
             </h3>
 
             <img
-  loading="lazy"
-  src={`https://github-profile-summary-cards.vercel.app/api/cards/stats?username=${username}&theme=${isDark ? 'tokyonight' : 'default'}`}
-  alt="GitHub Stats"
-  className="w-full max-w-md rounded-xl"
-/>
+              loading="lazy"
+              src={`https://github-profile-summary-cards.vercel.app/api/cards/stats?username=${username}&theme=${isDark ? 'tokyonight' : 'default'}`}
+              alt="GitHub Stats"
+              className="w-full max-w-md rounded-xl"
+            />
           </motion.div>
 
-          {/* Top Languages */}
+          {/* Languages Used */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,16 +95,23 @@ const GithubSection = () => {
             className="bg-white dark:bg-neutral-900/50 p-6 rounded-3xl shadow-sm border border-slate-200 dark:border-neutral-800 flex flex-col items-center justify-center transition-colors duration-300"
           >
             <h3 className="text-xl font-bold text-slate-700 dark:text-neutral-200 mb-4">
-              Top Languages
+              Languages Used
             </h3>
 
-            <img
-  loading="lazy"
-  src={`https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=${username}&theme=${isDark ? 'tokyonight' : 'default'}`}
-  alt="Top Languages"
-  className="w-full max-w-md rounded-xl"
-/>
+            <object
+              data="https://wakatime.com/share/@rushilpatel_33/597a7522-57ab-4be9-98de-75135c8317fa.svg"
+              type="image/svg+xml"
+              className="w-full max-w-md rounded-xl"
+              style={{ filter: isDark ? 'invert(1) hue-rotate(180deg)' : 'none' }}
+            >
+              <img
+                src="https://wakatime.com/share/@rushilpatel_33/597a7522-57ab-4be9-98de-75135c8317fa.svg"
+                alt="Languages Used"
+                className="w-full max-w-md rounded-xl"
+              />
+            </object>
           </motion.div>
+
         </div>
       </div>
     </section>
