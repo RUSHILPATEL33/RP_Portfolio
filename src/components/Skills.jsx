@@ -18,7 +18,7 @@ const techCategories = [
       { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
       { name: "C++", icon: <SiCplusplus className="text-[#00599C]" /> },
       { name: "Java", icon: <FaJava className="text-[#007396]" /> },
-      { name: "R", icon: <SiR className="text-[#276DC3]" /> },
+     // { name: "R", icon: <SiR className="text-[#276DC3]" /> },
     ]
   },
   {
